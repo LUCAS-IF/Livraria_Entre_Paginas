@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="480" height="680" viewBox="0 0 480 680">
+  <rect width="480" height="680" fill="#76523d"/>
+  <rect x="18" y="18" width="444" height="644" rx="5" fill="none" stroke="#fffaf1" stroke-opacity=".4" stroke-width="2"/>
+  <text x="40" y="72" fill="#fffaf1" font-family="Georgia,serif" font-size="22" letter-spacing="4">ENTRE PÁGINAS</text>
+  <path d="M40 92H440" stroke="#ead6b8" stroke-width="3"/>
+  <path d="M160 255H310L295 350Q235 390 175 350Z" fill="none" stroke="#ead6b8" stroke-width="9"/><path d="M310 275H340Q375 330 300 335M205 220Q185 190 210 170M250 220Q230 190 255 170" fill="none" stroke="#ead6b8" stroke-width="8"/>
+  <text x="240" y="485" fill="#fffaf1" font-family="Georgia,serif" font-size="38" font-weight="bold" text-anchor="middle"><tspan x="240" dy="0">Entre Linhas e</tspan><tspan x="240" dy="48">Café</tspan></text>
+  <text x="240" y="605" fill="#fffaf1" font-family="Arial,sans-serif" font-size="21" text-anchor="middle" letter-spacing="2">ELISA MONTEIRO</text>
+  <circle cx="240" cy="635" r="5" fill="#ead6b8"/>
+</svg>

@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="480" height="680" viewBox="0 0 480 680">
+  <rect width="480" height="680" fill="#425c79"/>
+  <rect x="18" y="18" width="444" height="644" rx="5" fill="none" stroke="#fffaf1" stroke-opacity=".4" stroke-width="2"/>
+  <text x="40" y="72" fill="#fffaf1" font-family="Georgia,serif" font-size="22" letter-spacing="4">ENTRE PÁGINAS</text>
+  <path d="M40 92H440" stroke="#d9e5ed" stroke-width="3"/>
+  <rect x="145" y="225" width="190" height="135" rx="8" fill="none" stroke="#d9e5ed" stroke-width="9"/><path d="M150 235L240 310L330 235" fill="none" stroke="#d9e5ed" stroke-width="8"/>
+  <text x="240" y="485" fill="#fffaf1" font-family="Georgia,serif" font-size="38" font-weight="bold" text-anchor="middle"><tspan x="240" dy="0">Cartas para o</tspan><tspan x="240" dy="48">Inverno</tspan></text>
+  <text x="240" y="605" fill="#fffaf1" font-family="Arial,sans-serif" font-size="21" text-anchor="middle" letter-spacing="2">MARINA VALENÇA</text>
+  <circle cx="240" cy="635" r="5" fill="#d9e5ed"/>
+</svg>

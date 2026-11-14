@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="480" height="680" viewBox="0 0 480 680">
+  <rect width="480" height="680" fill="#343d4a"/>
+  <rect x="18" y="18" width="444" height="644" rx="5" fill="none" stroke="#fffaf1" stroke-opacity=".4" stroke-width="2"/>
+  <text x="40" y="72" fill="#fffaf1" font-family="Georgia,serif" font-size="22" letter-spacing="4">ENTRE PÁGINAS</text>
+  <path d="M40 92H440" stroke="#f2d46d" stroke-width="3"/>
+  <path d="M195 230L130 300L195 370M285 230L350 300L285 370M265 205L215 395" fill="none" stroke="#f2d46d" stroke-width="12" stroke-linecap="round"/>
+  <text x="240" y="485" fill="#fffaf1" font-family="Georgia,serif" font-size="38" font-weight="bold" text-anchor="middle"><tspan x="240" dy="0">JavaScript sem</tspan><tspan x="240" dy="48">Mistério</tspan></text>
+  <text x="240" y="605" fill="#fffaf1" font-family="Arial,sans-serif" font-size="21" text-anchor="middle" letter-spacing="2">BRUNO TAVARES</text>
+  <circle cx="240" cy="635" r="5" fill="#f2d46d"/>
+</svg>

@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html lang="pt-BR" data-tema="claro">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Livraria Entre Páginas: livros para descobrir novas ideias, histórias e conhecimentos.">
+  <meta name="theme-color" content="#f8f5ef">
+  <title>Entre Páginas | Livraria</title>
+  <link rel="icon" href="assets/images/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <script src="js/modelos/Livro.js" defer></script>
+  <script src="js/modelos/ItemCarrinho.js" defer></script>
+  <script src="js/modelos/Carrinho.js" defer></script>
+  <script src="js/dados/livros.js" defer></script>
+  <script src="js/servicos/armazenamento.js" defer></script>
+  <script src="js/servicos/validacao.js" defer></script>
+  <script src="js/servicos/compra.js" defer></script>
+  <script src="js/app.js" defer></script>
+  <script src="js/contato.js" defer></script>
+</head>
+<body>
+  <a class="pular-conteudo" href="#conteudo-principal">Pular para o conteúdo principal</a>
+
+  <div class="faixa-aviso">
+    <p>Um bom livro sempre abre uma nova janela. <span>Frete grátis a partir de R$ 150,00.</span></p>
+  </div>
+
+  <header class="cabecalho-site">
+    <div class="container cabecalho-conteudo">
+      <a class="marca" href="#inicio" data-pagina="inicio" aria-label="Entre Páginas - página inicial">
+        <img src="assets/images/logo.svg" alt="" width="42" height="42">
+        <span><strong>entre páginas</strong><small>livraria & ideias</small></span>
+      </a>
+
+      <button class="botao-menu" id="botao-menu" type="button" aria-label="Abrir menu" aria-controls="menu-principal" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+
+      <nav class="menu-principal" id="menu-principal" aria-label="Navegação principal">
+        <a href="#inicio" data-pagina="inicio" class="link-menu ativo">Início</a>
+        <a href="#catalogo" data-pagina="catalogo" class="link-menu">Catálogo</a>
+        <a href="#sobre" data-pagina="sobre" class="link-menu">Sobre e contato</a>
+      </nav>
+
+      <div class="acoes-cabecalho">
+        <button class="botao-icone" id="botao-tema" type="button" aria-label="Ativar tema escuro" aria-pressed="false" title="Alternar tema">
+          <span aria-hidden="true" id="icone-tema">☾</span>
+        </button>
+        <button class="botao-carrinho" id="botao-carrinho" type="button" data-pagina="carrinho" aria-label="Abrir carrinho, 0 itens">
+          <span aria-hidden="true">♧</span><span class="texto-carrinho">Carrinho</span>
+          <span class="contador-carrinho" id="contador-carrinho">0</span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main id="conteudo-principal" class="container principal">
+    <!-- Página inicial: apresentação da livraria e livros escolhidos pela equipe. -->
+    <section class="pagina" id="pagina-inicio" aria-labelledby="titulo-inicio">
+      <section class="banner-inicial">
+        <div class="texto-banner">
+          <p class="sobretitulo">Livro do mês · Fantasia</p>
+          <h1 id="titulo-inicio" tabindex="-1">O Mapa das Estrelas</h1>
+          <p>Uma jovem cartógrafa recebe um mapa que revela lugares impossíveis. A escolha do mês é uma aventura sobre memória, coragem e magia.</p>
+          <div class="acoes-banner">
+            <a class="botao botao-principal" href="#catalogo" data-pagina="catalogo">Encontrar este livro <span aria-hidden="true">→</span></a>
+            <a class="link-simples" href="#sobre" data-pagina="sobre">Conheça a livraria</a>
+          </div>
+          <div class="nota-banner"><span aria-hidden="true">✦</span> Curadoria feita para leitores curiosos</div>
+        </div>
+        <div class="arte-banner" aria-hidden="true">
+          <div class="forma-banner forma-um"></div>
+          <div class="forma-banner forma-dois"></div>
+          <div class="livros-empilhados">
+            <div class="livro-banner livro-banner-um"><span>O prazer<br>de ler</span></div>
+            <div class="livro-banner livro-banner-dois"><span>Novos<br>mundos</span></div>
+            <div class="livro-banner livro-banner-tres"><span>Entre<br>páginas</span></div>
+          </div>
+          <span class="selo-banner">Leia<br>sem pressa</span>
+        </div>
+      </section>
+
+      <section class="secao-destaques" aria-labelledby="titulo-destaques">
+        <div class="cabecalho-secao">
+          <div>
+            <p class="sobretitulo">Escolhas da livraria</p>
+            <h2 id="titulo-destaques">Livros em destaque</h2>
+            <p class="descricao-secao">Quatro leituras para começar a descobrir novas histórias.</p>
+          </div>
+          <a class="link-simples" href="#catalogo" data-pagina="catalogo">Ver catálogo completo →</a>
+        </div>
+        <div class="grade-livros grade-destaques" id="lista-destaques" aria-live="polite"></div>
+      </section>
+    </section>
+
+    <!-- Catálogo: os cards são criados pelo JavaScript a partir de dados/livros.js. -->
+    <section class="pagina" id="pagina-catalogo" aria-labelledby="titulo-catalogo" hidden>
+      <div class="cabecalho-pagina">
+        <p class="sobretitulo">Descubra algo novo</p>
+        <h1 id="titulo-catalogo" tabindex="-1">Nosso catálogo</h1>
+        <p>Pesquise por título ou autor, escolha uma categoria e encontre uma leitura para seu momento.</p>
+      </div>
+
+      <div class="ferramentas-catalogo">
+        <form class="campo-busca" id="formulario-busca" role="search">
+          <label class="visualmente-oculto" for="campo-busca">Buscar livro por título ou autor</label>
+          <span aria-hidden="true">⌕</span>
+          <input id="campo-busca" type="search" placeholder="Buscar por título ou autor..." autocomplete="off">
+          <button class="botao botao-secundario" type="submit">Buscar</button>
+        </form>
+        <div class="linha-filtros">
+          <div class="filtros-categoria" id="filtros-categoria" role="group" aria-label="Filtrar livros por categoria"></div>
+          <div class="controles-catalogo">
+            <button class="botao botao-favoritos" id="botao-favoritos" type="button" aria-pressed="false">♡ Meus favoritos <span id="contador-favoritos">0</span></button>
+            <label class="rotulo-ordenacao" for="ordenacao">Ordenar por</label>
+            <select id="ordenacao" name="ordenacao">
+              <option value="destaque">Destaques</option>
+              <option value="preco-menor">Menor preço</option>
+              <option value="preco-maior">Maior preço</option>
+              <option value="titulo">Título (A–Z)</option>
+              <option value="lancamento">Mais recentes</option>
+            </select>
+          </div>
+        </div>
+        <p class="resultado-catalogo" id="resultado-catalogo" aria-live="polite">Carregando livros...</p>
+      </div>
+
+      <div class="grade-livros" id="lista-livros" aria-live="polite" aria-busy="true"></div>
+      <div class="estado-vazio" id="estado-vazio" hidden>
+        <span aria-hidden="true">⌕</span>
+        <h2>Nenhum livro encontrado</h2>
+        <p>Tente outro título, autor ou categoria.</p>
+        <button class="botao botao-secundario" id="limpar-filtros" type="button">Limpar filtros</button>
+      </div>
+      <div class="carregar-mais-area"><button class="botao botao-secundario" id="botao-carregar-mais" type="button">Carregar mais livros</button></div>
+
+      <section class="busca-online" aria-labelledby="titulo-busca-online">
+        <div>
+          <p class="sobretitulo">Mais opções de leitura</p>
+          <h2 id="titulo-busca-online">Buscar na Open Library</h2>
+          <p>Pesquise títulos e autores em um catálogo bibliográfico público. Os resultados entram no catálogo junto com os livros da livraria, recebem uma categoria aproximada e podem ser abertos nos detalhes. O preço é apenas ilustrativo.</p>
+        </div>
+        <form id="formulario-openlibrary" class="formulario-api">
+          <label class="visualmente-oculto" for="campo-openlibrary">Título ou autor para pesquisar na Open Library</label>
+          <input id="campo-openlibrary" type="search" placeholder="Ex.: literatura brasileira" required>
+          <button class="botao botao-principal" id="botao-openlibrary" type="submit">Buscar na API</button>
+        </form>
+        <p class="mensagem-api" id="mensagem-api" role="status" aria-live="polite">Os resultados externos aparecem junto ao catálogo enquanto esta página estiver aberta.</p>
+      </section>
+    </section>
+
+    <!-- Detalhes: o conteúdo é preenchido conforme o livro escolhido no catálogo. -->
+    <section class="pagina" id="pagina-detalhes" aria-labelledby="titulo-detalhes" hidden>
+      <a class="link-voltar" id="voltar-catalogo" href="#catalogo" data-pagina="catalogo">← Voltar ao catálogo</a>
+      <div class="detalhes-livro">
+        <div class="moldura-capa-detalhe"><img id="detalhe-capa" src="assets/images/capa-generica.svg" alt="Capa do livro" width="420" height="600"></div>
+        <div class="texto-detalhes">
+          <p class="sobretitulo" id="detalhe-categoria">Categoria</p>
+          <h1 id="titulo-detalhes" tabindex="-1">Título do livro</h1>
+          <p class="autor-detalhe" id="detalhe-autor"></p>
+          <div class="avaliacao-detalhe">
+            <div id="estrelas-media" aria-label="Avaliação média"></div>
+            <span id="texto-avaliacao"></span>
+          </div>
+          <p class="sinopse-detalhe" id="detalhe-sinopse"></p>
+          <dl class="dados-bibliograficos">
+            <div><dt>Editora</dt><dd id="detalhe-editora"></dd></div>
+            <div><dt>Ano</dt><dd id="detalhe-ano"></dd></div>
+            <div><dt>Páginas</dt><dd id="detalhe-paginas"></dd></div>
+            <div><dt>Categoria</dt><dd id="detalhe-categoria-dado"></dd></div>
+          </dl>
+          <p class="preco-detalhe" id="detalhe-preco"></p>
+          <a class="link-origem-api" id="link-origem-api" href="https://openlibrary.org/" target="_blank" rel="noopener noreferrer" hidden>Consultar registro na Open Library ↗</a>
+          <button class="botao botao-principal" id="adicionar-detalhe" type="button">Adicionar ao carrinho</button>
+          <section class="avaliar-livro" aria-labelledby="titulo-avaliar">
+            <h2 id="titulo-avaliar">O que você achou deste livro?</h2>
+            <p>Sua avaliação fica salva somente neste navegador.</p>
+            <div id="botoes-avaliacao" class="botoes-estrelas" role="group" aria-label="Escolha uma nota de uma a cinco estrelas"></div>
+            <p class="mensagem-avaliacao" id="mensagem-avaliacao" role="status" aria-live="polite"></p>
+          </section>
+        </div>
+      </div>
+    </section>
+
+    <!-- Carrinho e checkout demonstrativo. Nenhum pagamento é processado. -->
+    <section class="pagina" id="pagina-carrinho" aria-labelledby="titulo-carrinho" hidden>
+      <div class="cabecalho-pagina">
+        <p class="sobretitulo">Sua seleção</p>
+        <h1 id="titulo-carrinho" tabindex="-1">Meu carrinho</h1>
+        <p>Confira os livros e as quantidades antes de concluir seu pedido demonstrativo.</p>
+      </div>
+      <div class="layout-carrinho">
+        <div class="itens-carrinho" id="lista-carrinho" aria-live="polite"></div>
+        <aside class="resumo-carrinho" aria-labelledby="titulo-resumo">
+          <h2 id="titulo-resumo">Resumo do pedido</h2>
+          <dl class="lista-totais">
+            <div><dt>Subtotal</dt><dd id="valor-subtotal">R$ 0,00</dd></div>
+            <div><dt>Frete</dt><dd id="valor-frete">R$ 0,00</dd></div>
+            <div id="linha-desconto" hidden><dt>Desconto</dt><dd id="valor-desconto">- R$ 0,00</dd></div>
+            <div class="total-final"><dt>Total</dt><dd id="valor-total">R$ 0,00</dd></div>
+          </dl>
+          <form id="formulario-cupom" class="formulario-cupom">
+            <label for="campo-cupom">Cupom de desconto</label>
+            <div><input id="campo-cupom" type="text" placeholder="Digite LIVRO10" autocomplete="off"><button class="botao botao-secundario" type="submit">Aplicar</button></div>
+            <p id="mensagem-cupom" role="status" aria-live="polite">Use o cupom LIVRO10 para ganhar 10% de desconto.</p>
+          </form>
+          <p class="aviso-frete" id="aviso-frete">Frete grátis para compras a partir de R$ 150,00.</p>
+          <p class="nota-persistencia">Seu carrinho é salvo automaticamente neste navegador.</p>
+          <button class="botao botao-principal botao-largo" id="botao-ir-checkout" type="button">Continuar para o endereço</button>
+          <button class="botao-limpar" id="botao-esvaziar" type="button">Esvaziar carrinho</button>
+        </aside>
+      </div>
+      <section class="checkout" id="area-checkout" aria-labelledby="titulo-checkout" hidden>
+        <div class="cabecalho-secao">
+          <div><p class="sobretitulo">Última etapa</p><h2 id="titulo-checkout">Dados para entrega</h2></div>
+        </div>
+        <p class="aviso-demonstrativo">Esta é uma simulação acadêmica. O pedido não será enviado e nenhum pagamento será realizado.</p>
+        <form id="formulario-checkout" novalidate>
+          <div class="grade-formulario">
+            <div class="campo campo-largo"><label for="checkout-nome">Nome completo</label><input id="checkout-nome" name="nome" autocomplete="name" required minlength="3"></div>
+            <div class="campo campo-largo"><label for="checkout-email">E-mail</label><input id="checkout-email" name="email" type="email" autocomplete="email" required></div>
+            <div class="campo"><label for="checkout-cep">CEP</label><div class="campo-cep"><input id="checkout-cep" name="cep" inputmode="numeric" maxlength="9" autocomplete="postal-code" placeholder="00000-000" required><button class="botao botao-secundario" id="buscar-cep" type="button">Buscar CEP</button></div><small id="mensagem-cep" role="status" aria-live="polite"></small></div>
+            <div class="campo campo-largo"><label for="checkout-rua">Rua / Logradouro</label><input id="checkout-rua" name="rua" autocomplete="address-line1" required></div>
+            <div class="campo"><label for="checkout-numero">Número</label><input id="checkout-numero" name="numero" type="text" inputmode="numeric" pattern="[0-9]+" maxlength="6" autocomplete="off" required aria-describedby="ajuda-numero"><small id="ajuda-numero">Informe somente números.</small></div>
+            <div class="campo"><label for="checkout-complemento">Complemento <span>(opcional)</span></label><input id="checkout-complemento" name="complemento" autocomplete="address-line2"></div>
+            <div class="campo"><label for="checkout-bairro">Bairro</label><input id="checkout-bairro" name="bairro" required></div>
+            <div class="campo"><label for="checkout-cidade">Cidade</label><input id="checkout-cidade" name="cidade" required></div>
+            <div class="campo"><label for="checkout-estado">UF</label><input id="checkout-estado" name="estado" maxlength="2" required></div>
+          </div>
+          <fieldset class="grupo-pagamento">
+            <legend>Forma de pagamento (simulação)</legend>
+            <p>Escolha como gostaria de pagar. Nenhuma cobrança será realizada.</p>
+            <div class="opcoes-pagamento">
+              <label class="opcao-pagamento"><input type="radio" name="pagamento" value="Pix" required> <span><strong>Pix</strong><small>QR Code demonstrativo</small></span></label>
+              <label class="opcao-pagamento"><input type="radio" name="pagamento" value="Cartão de crédito"> <span><strong>Cartão de crédito</strong><small>Dados fictícios para teste visual</small></span></label>
+              <label class="opcao-pagamento"><input type="radio" name="pagamento" value="Boleto"> <span><strong>Boleto</strong><small>Opção ilustrativa, sem emissão</small></span></label>
+            </div>
+
+            <div class="detalhes-pagamento pix-demonstrativo" id="detalhes-pagamento-pix" hidden>
+              <div>
+                <h3>QR Code demonstrativo</h3>
+                <p>Este código contém apenas um texto de demonstração. Ele não é um QR Code Pix válido e não permite transferências.</p>
+                <small>Para esta atividade, basta visualizar o código; não tente efetuar um pagamento.</small>
+              </div>
+              <img src="assets/images/pix-qr-demonstrativo.svg" alt="QR Code fictício com a indicação de que não possui valor financeiro" width="164" height="164">
+            </div>
+
+            <div class="detalhes-pagamento dados-cartao" id="detalhes-pagamento-cartao" hidden>
+              <h3>Dados fictícios do cartão</h3>
+              <p class="aviso-cartao">Use somente informações inventadas para testar o formulário. Não informe os dados de um cartão verdadeiro. Os campos são validados no navegador e apagados ao concluir.</p>
+              <div class="grade-formulario">
+                <div class="campo campo-largo">
+                  <label for="checkout-cartao-numero">Número do cartão</label>
+                  <input id="checkout-cartao-numero" name="cartaoNumero" type="text" inputmode="numeric" maxlength="19" placeholder="0000 0000 0000 0000" autocomplete="off" aria-describedby="ajuda-cartao-numero">
+                  <small id="ajuda-cartao-numero">Digite 16 números fictícios.</small>
+                </div>
+                <div class="campo campo-largo">
+                  <label for="checkout-cartao-titular">Nome do titular</label>
+                  <input id="checkout-cartao-titular" name="cartaoTitular" type="text" maxlength="60" placeholder="NOME FICTÍCIO" autocomplete="off">
+                </div>
+                <div class="campo">
+                  <label for="checkout-cartao-validade">Validade</label>
+                  <input id="checkout-cartao-validade" name="cartaoValidade" type="text" inputmode="numeric" maxlength="5" placeholder="MM/AA" autocomplete="off">
+                </div>
+                <div class="campo">
+                  <label for="checkout-cartao-cvv">Código de segurança (CVV)</label>
+                  <input id="checkout-cartao-cvv" name="cartaoCvv" type="password" inputmode="numeric" maxlength="4" placeholder="000" autocomplete="off">
+                  <small>Informe 3 ou 4 números fictícios.</small>
+                </div>
+              </div>
+            </div>
+
+            <div class="detalhes-pagamento boleto-demonstrativo" id="detalhes-pagamento-boleto" hidden>
+              <h3>Boleto demonstrativo</h3>
+              <p>Esta opção ilustra uma forma de pagamento, mas não gera linha digitável, boleto bancário ou cobrança.</p>
+            </div>
+          </fieldset>
+          <p class="mensagem-formulario" id="mensagem-checkout" role="status" aria-live="polite"></p>
+          <div class="acoes-checkout"><button class="botao botao-secundario" id="voltar-resumo" type="button">Voltar ao resumo</button><button class="botao botao-principal" type="submit">Concluir pedido demonstrativo</button></div>
+        </form>
+      </section>
+      <div class="pedido-concluido" id="pedido-concluido" role="status" aria-live="polite" hidden>
+        <span aria-hidden="true">✓</span><h2>Pedido demonstrativo concluído!</h2><p id="mensagem-pedido"></p>
+        <div class="pix-confirmacao" id="pix-confirmacao" hidden>
+          <h3>QR Code da simulação</h3>
+          <img src="assets/images/pix-qr-demonstrativo.svg" alt="QR Code fictício sem validade para pagamento" width="164" height="164">
+          <p>Este QR Code não realiza uma transação Pix.</p>
+        </div>
+        <button class="botao botao-principal" type="button" data-pagina="catalogo">Continuar lendo</button>
+      </div>
+    </section>
+
+    <!-- Sobre e contato: a mensagem é validada no navegador, sem envio a servidor. -->
+    <section class="pagina" id="pagina-sobre" aria-labelledby="titulo-sobre" hidden>
+      <div class="cabecalho-pagina">
+        <p class="sobretitulo">Um lugar para leitores</p>
+        <h1 id="titulo-sobre" tabindex="-1">Sobre a Entre Páginas</h1>
+        <p>Acreditamos que cada leitura pode abrir caminhos, despertar perguntas e aproximar pessoas.</p>
+      </div>
+      <div class="sobre-conteudo">
+        <div class="texto-sobre">
+          <h2>Mais do que uma livraria</h2>
+          <p>A Entre Páginas é uma livraria fictícia criada para esta atividade acadêmica. Nosso catálogo reúne histórias de romance, fantasia, literatura infantil e livros sobre tecnologia. A ideia é oferecer um espaço simples e acolhedor para quem gosta de descobrir novos assuntos.</p>
+          <p>Os títulos e dados do catálogo local são demonstrativos. A busca na Open Library permite consultar registros bibliográficos reais como recurso complementar.</p>
+          <div class="cartao-endereco">
+            <strong>Visite nosso espaço (endereço fictício)</strong>
+            <p>Rua das Letras, 123 – Centro<br>São Paulo – SP</p>
+            <p><strong>Horário:</strong> segunda a sexta, das 9h às 18h.</p>
+            <div class="contatos-diretos">
+              <a href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer" aria-label="Abrir o site do Instagram em uma nova aba">Acessar Instagram ↗</a>
+              <a href="tel:+551140001234">Telefone: (11) 4000-1234</a>
+              <small>Redes e telefone são dados demonstrativos do projeto.</small>
+            </div>
+          </div>
+        </div>
+        <form class="formulario-contato" id="formulario-contato" novalidate>
+          <h2>Fale com a gente</h2>
+          <p>Preencha os campos e veja a confirmação da mensagem nesta página.</p>
+          <div class="campo"><label for="contato-nome">Nome</label><input id="contato-nome" name="nome" autocomplete="name" required minlength="3"></div>
+          <div class="campo"><label for="contato-email">E-mail</label><input id="contato-email" name="email" type="email" autocomplete="email" required></div>
+          <div class="campo"><label for="contato-assunto">Assunto</label><input id="contato-assunto" name="assunto" required minlength="3"></div>
+          <div class="campo"><label for="contato-mensagem">Mensagem</label><textarea id="contato-mensagem" name="mensagem" rows="5" required minlength="10"></textarea></div>
+          <p class="mensagem-formulario" id="mensagem-contato" role="status" aria-live="polite"></p>
+          <button class="botao botao-principal botao-largo" type="submit">Enviar mensagem</button>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer class="rodape-site">
+    <div class="container rodape-conteudo">
+      <div class="rodape-marca">
+        <a class="marca marca-rodape" href="#inicio" data-pagina="inicio"><img src="assets/images/logo.svg" alt="" width="42" height="42"><span><strong>entre páginas</strong><small>livraria & ideias</small></span></a>
+        <p>Um espaço para descobrir histórias, ideias e novos mundos.</p>
+      </div>
+      <div class="coluna-rodape"><h2>Explore</h2><a href="#inicio" data-pagina="inicio">Início</a><a href="#catalogo" data-pagina="catalogo">Catálogo</a><a href="#sobre" data-pagina="sobre">Sobre e contato</a></div>
+      <div class="coluna-rodape"><h2>Contato</h2><p>Rua das Letras, 123 – Centro</p><p>São Paulo – SP (endereço fictício)</p><a href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer">Instagram ↗</a><a href="tel:+551140001234">(11) 4000-1234</a></div>
+    </div>
+    <div class="container rodape-final"><p>© <span id="ano-atual"></span> Livraria Entre Páginas. Projeto acadêmico demonstrativo.</p><p>Desenvolvido por Lucas Souza e Renan Martins.</p></div>
+  </footer>
+
+  <div class="notificacoes" id="notificacoes" role="status" aria-live="polite" aria-atomic="true"></div>
+</body>
+</html>

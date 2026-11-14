@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="480" height="680" viewBox="0 0 480 680">
+  <rect width="480" height="680" fill="#577d8a"/>
+  <rect x="18" y="18" width="444" height="644" rx="5" fill="none" stroke="#fffaf1" stroke-opacity=".4" stroke-width="2"/>
+  <text x="40" y="72" fill="#fffaf1" font-family="Georgia,serif" font-size="22" letter-spacing="4">ENTRE PÁGINAS</text>
+  <path d="M40 92H440" stroke="#f4d780" stroke-width="3"/>
+  <circle cx="220" cy="275" r="82" fill="none" stroke="#f4d780" stroke-width="14"/><path d="M280 335L360 415" stroke="#f4d780" stroke-width="18" stroke-linecap="round"/><circle cx="200" cy="250" r="9" fill="#f4d780"/>
+  <text x="240" y="485" fill="#fffaf1" font-family="Georgia,serif" font-size="38" font-weight="bold" text-anchor="middle"><tspan x="240" dy="0">O Clube dos</tspan><tspan x="240" dy="48">Curiosos</tspan></text>
+  <text x="240" y="605" fill="#fffaf1" font-family="Arial,sans-serif" font-size="21" text-anchor="middle" letter-spacing="2">MIGUEL ARANTES</text>
+  <circle cx="240" cy="635" r="5" fill="#f4d780"/>
+</svg>

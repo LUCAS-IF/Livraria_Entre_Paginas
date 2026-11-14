@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="480" height="680" viewBox="0 0 480 680">
+  <rect width="480" height="680" fill="#355a73"/>
+  <rect x="18" y="18" width="444" height="644" rx="5" fill="none" stroke="#fffaf1" stroke-opacity=".4" stroke-width="2"/>
+  <text x="40" y="72" fill="#fffaf1" font-family="Georgia,serif" font-size="22" letter-spacing="4">ENTRE PÁGINAS</text>
+  <path d="M40 92H440" stroke="#b7d8df" stroke-width="3"/>
+  <g fill="#b7d8df"><circle cx="240" cy="280" r="24"/><circle cx="140" cy="220" r="20"/><circle cx="350" cy="215" r="20"/><circle cx="150" cy="365" r="20"/><circle cx="345" cy="370" r="20"/></g><g stroke="#b7d8df" stroke-width="9"><path d="M220 265L157 232M260 265L333 228M220 300L165 350M260 300L330 350"/></g>
+  <text x="240" y="485" fill="#fffaf1" font-family="Georgia,serif" font-size="38" font-weight="bold" text-anchor="middle"><tspan x="240" dy="0">Redes para</tspan><tspan x="240" dy="48">Iniciantes</tspan></text>
+  <text x="240" y="605" fill="#fffaf1" font-family="Arial,sans-serif" font-size="21" text-anchor="middle" letter-spacing="2">ANA RIBEIRO</text>
+  <circle cx="240" cy="635" r="5" fill="#b7d8df"/>
+</svg>

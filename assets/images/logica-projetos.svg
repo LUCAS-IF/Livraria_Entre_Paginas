@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="480" height="680" viewBox="0 0 480 680">
+  <rect width="480" height="680" fill="#594c79"/>
+  <rect x="18" y="18" width="444" height="644" rx="5" fill="none" stroke="#fffaf1" stroke-opacity=".4" stroke-width="2"/>
+  <text x="40" y="72" fill="#fffaf1" font-family="Georgia,serif" font-size="22" letter-spacing="4">ENTRE PÁGINAS</text>
+  <path d="M40 92H440" stroke="#d6c8ec" stroke-width="3"/>
+  <g fill="none" stroke="#d6c8ec" stroke-width="8"><rect x="185" y="190" width="110" height="55" rx="20"/><rect x="115" y="335" width="110" height="55" rx="20"/><rect x="255" y="335" width="110" height="55" rx="20"/><path d="M240 245V285H170V335M240 285H310V335"/></g>
+  <text x="240" y="485" fill="#fffaf1" font-family="Georgia,serif" font-size="38" font-weight="bold" text-anchor="middle"><tspan x="240" dy="0">Lógica de</tspan><tspan x="240" dy="48">Programação em</tspan><tspan x="240" dy="48">Projetos</tspan></text>
+  <text x="240" y="605" fill="#fffaf1" font-family="Arial,sans-serif" font-size="21" text-anchor="middle" letter-spacing="2">CARLA MENDES</text>
+  <circle cx="240" cy="635" r="5" fill="#d6c8ec"/>
+</svg>

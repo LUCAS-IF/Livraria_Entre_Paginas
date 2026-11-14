@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="480" height="680" viewBox="0 0 480 680">
+  <rect width="480" height="680" fill="#51815e"/>
+  <rect x="18" y="18" width="444" height="644" rx="5" fill="none" stroke="#fffaf1" stroke-opacity=".4" stroke-width="2"/>
+  <text x="40" y="72" fill="#fffaf1" font-family="Georgia,serif" font-size="22" letter-spacing="4">ENTRE PÁGINAS</text>
+  <path d="M40 92H440" stroke="#f1d88f" stroke-width="3"/>
+  <path d="M240 390V255M240 310Q130 300 150 210Q245 210 240 310ZM240 350Q345 340 335 250Q240 255 240 350Z" fill="none" stroke="#f1d88f" stroke-width="10"/><path d="M110 410H370" stroke="#f1d88f" stroke-width="8"/>
+  <text x="240" y="485" fill="#fffaf1" font-family="Georgia,serif" font-size="38" font-weight="bold" text-anchor="middle"><tspan x="240" dy="0">Viagem ao Fundo</tspan><tspan x="240" dy="48">do Quintal</tspan></text>
+  <text x="240" y="605" fill="#fffaf1" font-family="Arial,sans-serif" font-size="21" text-anchor="middle" letter-spacing="2">BEATRIZ LUZ</text>
+  <circle cx="240" cy="635" r="5" fill="#f1d88f"/>
+</svg>

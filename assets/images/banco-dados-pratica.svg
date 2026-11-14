@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="480" height="680" viewBox="0 0 480 680">
+  <rect width="480" height="680" fill="#4d5144"/>
+  <rect x="18" y="18" width="444" height="644" rx="5" fill="none" stroke="#fffaf1" stroke-opacity=".4" stroke-width="2"/>
+  <text x="40" y="72" fill="#fffaf1" font-family="Georgia,serif" font-size="22" letter-spacing="4">ENTRE PÁGINAS</text>
+  <path d="M40 92H440" stroke="#d2d8b4" stroke-width="3"/>
+  <ellipse cx="240" cy="225" rx="100" ry="35" fill="none" stroke="#d2d8b4" stroke-width="9"/><path d="M140 225V365C140 415 340 415 340 365V225M140 295C140 340 340 340 340 295" fill="none" stroke="#d2d8b4" stroke-width="9"/>
+  <text x="240" y="485" fill="#fffaf1" font-family="Georgia,serif" font-size="38" font-weight="bold" text-anchor="middle"><tspan x="240" dy="0">Banco de Dados na</tspan><tspan x="240" dy="48">Prática</tspan></text>
+  <text x="240" y="605" fill="#fffaf1" font-family="Arial,sans-serif" font-size="21" text-anchor="middle" letter-spacing="2">PEDRO AZEVEDO</text>
+  <circle cx="240" cy="635" r="5" fill="#d2d8b4"/>
+</svg>

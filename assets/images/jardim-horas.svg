@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="480" height="680" viewBox="0 0 480 680">
+  <rect width="480" height="680" fill="#34564a"/>
+  <rect x="18" y="18" width="444" height="644" rx="5" fill="none" stroke="#fffaf1" stroke-opacity=".4" stroke-width="2"/>
+  <text x="40" y="72" fill="#fffaf1" font-family="Georgia,serif" font-size="22" letter-spacing="4">ENTRE PÁGINAS</text>
+  <path d="M40 92H440" stroke="#e5c9a8" stroke-width="3"/>
+  <path d="M240 250C130 180 115 315 238 365C365 330 350 195 240 250Z" fill="none" stroke="#e5c9a8" stroke-width="9"/><path d="M160 335L320 230" stroke="#e5c9a8" stroke-width="7"/>
+  <text x="240" y="485" fill="#fffaf1" font-family="Georgia,serif" font-size="38" font-weight="bold" text-anchor="middle"><tspan x="240" dy="0">O Jardim das</tspan><tspan x="240" dy="48">Horas</tspan></text>
+  <text x="240" y="605" fill="#fffaf1" font-family="Arial,sans-serif" font-size="21" text-anchor="middle" letter-spacing="2">HELENA DUARTE</text>
+  <circle cx="240" cy="635" r="5" fill="#e5c9a8"/>
+</svg>
