@@ -349,14 +349,14 @@ html[data-tema="escuro"] .pix-confirmacao { border-color: #718474; box-shadow: 0
 .formulario-contato h2 { margin-bottom: -8px; font-size: 1.6rem; }
 .formulario-contato > p { margin-bottom: 0; color: var(--texto-suave); font-size: .9rem; }
 .rodape-site { background: var(--superficie-suave); border-top: 1px solid var(--linha); }
-.rodape-conteudo { display: grid; grid-template-columns: 1.4fr 1fr 1fr; gap: 40px; padding-block: 40px; }
+.rodape-conteudo { display: grid; grid-template-columns: 1.4fr 1fr 1fr; gap: 40px; padding-block: 10px; }
 .rodape-marca > p { max-width: 300px; margin: 12px 0 0; color: var(--texto-suave); font-size: .9rem; }
-.coluna-rodape { display: flex; flex-direction: column; align-items: start; gap: 7px; }
-.coluna-rodape h2 { margin-bottom: 7px; font: 700 .95rem var(--fonte-texto); }
+.coluna-rodape { display: flex; flex-direction: column; align-items: start; gap: 2px; }
+.coluna-rodape h2 { margin-bottom: 2px; font: 700 .95rem var(--fonte-texto); }
 .coluna-rodape a { color: var(--texto-suave); font-size: .88rem; text-decoration: none; }
 .coluna-rodape a:hover { color: var(--principal); text-decoration: underline; }
 .coluna-rodape p { margin: 0; color: var(--texto-suave); font-size: .85rem; }
-.rodape-final { display: flex; justify-content: space-between; gap: 20px; padding-block: 15px; border-top: 1px solid var(--linha); color: var(--texto-suave); font-size: .78rem; }
+.rodape-final { display: flex; justify-content: space-between; gap: 20px; padding-block: 5px; border-top: 1px solid var(--linha); color: var(--texto-suave); font-size: .78rem; }
 .rodape-final p { margin: 0; }
 .notificacoes { position: fixed; z-index: 50; right: 20px; bottom: 20px; display: grid; gap: 10px; max-width: min(380px, calc(100% - 40px)); }
 .notificacao { padding: 13px 17px; border: 1px solid var(--linha); border-radius: 12px; background: var(--superficie); box-shadow: var(--sombra); color: var(--texto); animation: aparecer .2s ease-out; }
